@@ -1,5 +1,5 @@
 # coding-interview-university
-This repo will contains my progress in jwasham study plan and much more topics i study 
+This repo will contains my progress in jwasham study plan and other related topics i study 
 
 # Table of Contents
   - [1. Big-O Notation](#1-big-o-notation)
@@ -104,5 +104,12 @@ This repo will contains my progress in jwasham study plan and much more topics i
 <br>
 
 # 5. Resources
-<br>
-<br>
+this resources i have used for my studying
+- [Algorithms](https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)
+- [Data Structures Part1](https://www.youtube.com/playlist?list=PLoK2Lr1miEm-5zCzKE8siQezj9rvQlnca)
+- [DBMS](https://www.youtube.com/playlist?list=PLSE8ODhjZXjbohkNBWQs_otTrBTrjyohi)
+- [DB](https://www.youtube.com/watch?v=yLc0Yp5QZlU&list=PL37D52B7714788190)
+- [NoSQL](https://www.youtube.com/watch?v=xh4gy1lbL2k)
+- [MySQL](https://www.youtube.com/watch?v=kb-_GbpH3sQ)
+- [mongoDB](https://www.youtube.com/playlist?list=PLesfn4TAj57XGGSmVzzpxY69-lha1EWEI)
+- [Principles](https://www.youtube.com/playlist?list=PLnqAlQ9hFYdflFSS4NigVB7aSoYPNwHTL)
