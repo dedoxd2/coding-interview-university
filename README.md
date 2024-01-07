@@ -29,6 +29,11 @@ This repo will contains my progress in jwasham study plan and other related topi
        - [NoSQL Types](#nosql-types)
        - [Conclusion](#conclusion)
        - [MongoDB](#mongodb)
+         - [What is MongoDB ?](#what-is-mongodb-)
+         - [Why use MongoDB ?](#why-use-mongodb-)
+         - [How it works ?](#how-it-works-)
+         - [BSON](#bson)
+         - [Basic Commands](#basic-commands)
   - [5. Resources](#5-resources) 
 
 # 1. Big-O Notation
@@ -207,7 +212,82 @@ This repo will contains my progress in jwasham study plan and other related topi
 <br>
 
 # MongoDB
+
+- ## __What is MongoDB ?__
+  - *MongoDB is a cross-platform , document oriented database that provides , high performance , high availability , and easy scalability .*
+  - *MongoDB works on concept of collection and document .*
+  - *Designed with both scalability and developer agility*
+  - *Built for Speed*
+  - *Rich Document based queries for Easy readability*
+  - *Full Index Support for High Performance*
+  - *Replication and Failover High Availability*
+  - *Auto Sharding Easy Scalability*
+    -  *A database is a horizontal partition of data in a database or search engine . Each individual partition os referred to as a shard or database shard . Each shard i held on a separate database server instance , to spread load*
+  - *MapReduce for Aggregation*
+    - *MapReduce is a programming model and a associated implementation for processing and generating big data sets with a parallel , distributed algorithms on a cluster*
+  - *Document - oriented database*
+    -  *Uses JSON ( BSON actually)*
+  - *Schema-free*
+  - *Performance*
+    - *Written in C++*
+    - *Full index support*
+    - *No transactions (has atomic operations)*
+    - *Memory-mapped files(delayed writes)*
+  - *Scalability*
+    -  *Replication*
+    -  *Audo-Sharding*
+  - *Commercially supported*
+    - *Lots of documentation*
+  - *Supported Platforms :*
+    - *OSX - Linux - Solaris - Windows - FreeBSD*
+  -  *MongoDB Drivers :*
+     - *c, c++ , Java ,JS, .NET (C# F#, PowerShell, etc) Nodejs ,Perl, PHP , Python , Ruby, Scala*
 <br>
+
+- ## __Why use MongoDB ?__
+  - *SQL was invented in the 70's to store data.*
+  - *MongoDB stores documents (or) objects.*
+  - *Now-a-days, everyone works with objects (Python/Ruby/Java/etc.)*
+  - *And we need Databases to persist our objects .Then why not store objects directly ?*
+  - *Embedded documents and arrays  reduce need for joins .*
+    - *No joins and No-multi document transactions.* 
+
+- ## __Great for / Not Great For__
+  - __MongoDB is great for :__
+    -  *RDBMS replacement for Web Applications .*
+    -  *Semi-structured Content Management*
+    -  *Real-time Analytics & High-Speed Logging*
+    -  *Caching and High Scalability*
+    -  *Web 2.0 , Media , SAAS , Gaming*
+  - __Isn't Great for :__
+    -   *Highly Transactional Applications*
+    -   *Problems requiring SQL* 
+<br>
+
+- ## __How it Works ?__
+
+  <img src="https://cdn.educba.com/academy/wp-content/uploads/2019/05/MongoDB-chart1.jpg" /> 
+<br>
+
+- ## __BSON__
+  - *It is a computer data interchange format used mainly as a data storage and network transfer format in the MongoDB database*
+  - *It is a binary form for representing simple data structures .*
+  - *BSON is faster to scan for specific fields than JSON*
+  - *BSON adds some additional types such as a date type and byte-array(bindata) datatype.*
+  - *Client drivers serialize data to BSON , then transmit the data over the wire to the db*
+  - *Data is sotred on disk in BSON format . Thus , on a retrieval , the database very little translation to send anobject out , allowing high efficiency*
+  - *The client driver unserialized a received BSON object to its native language format*
+ 
+- ## __What are the goals of BSON ?__
+  -  *Fast scan-ability*
+  -  *Easy manipulation*
+  -  *Additional data types*
+ 
+<br>
+
+
+- ## __Basic Commands__
+
 <br>
 
 # 5. Resources
