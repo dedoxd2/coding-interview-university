@@ -34,6 +34,7 @@ This repo will contains my progress in jwasham study plan and other related topi
          - [How it works ?](#how-it-works-)
          - [BSON](#bson)
          - [Basic Commands](#basic-commands)
+         - [CRUD Operations](#crud-operations)
   - [5. Resources](#5-resources) 
 
 # 1. Big-O Notation
@@ -287,6 +288,59 @@ This repo will contains my progress in jwasham study plan and other related topi
 
 
 - ## __Basic Commands__
+  - ```show dbs```
+    - as the name saying ,it's gonna shows up the current databases on your machine 
+  - ```use "DB's name"```
+    -  if the database does not exist it will create it , then switching to the meant database
+  -  ```db.createCollection("Collection name",options)```
+     -  creating a collection in the database
+     - [Check the documentation for more details](https://www.mongodb.com/docs/manual/reference/method/db.createCollection/)
+    <br>
+
+  - ## __CRUD Operations__
+    - Create Operations
+       - Create Collection
+        >     db.createCollection("Collection name",options)
+       -  creating a collection in the database
+       - [Check the documentation for more details for the options parameter ](https://www.mongodb.com/docs/manual/reference/method/db.createCollection/)
+       <br>
+ 
+
+       -  Insert Data
+          - you can insert one  document by using  
+          >      db.tutorial.insertOne({title:"MongoDB",by:"ITI",url:"maharatech.com/MongoDB"})   
+          - or you can insert multiple documents if you need
+          >      db.tutorial.insertMany( [{ _id:1, title:"Example1" , by:"Example1" , url:"Example1"} ,
+          >     {_id:2 , title:"Example2" , by:"Example2" , url:"Example2" , publishDate : new Date()}])
+          
+          <br>
+     
+          
+          - ***Note that : if you inserted data into a collection does not exists it will create the collection and insert the data into it***
+          <br>
+          <br>
+
+    - Read Operations
+      - db.tutorial.find({conditions})
+      >     db.tutorial.find({title:"MongoDB", by :"ITT"})
+
+      - you can access nested documents by using the dot "." notation ,for example
+      >     db.inventory.find({'size.w':11 , status : 'D'})
+
+      - dealing with array values
+      >     db.inventory.find( { tags : [ "red" , "blank" ] } )  // tags "==" [red, blank]
+
+      >     db.inventory.find({ tags : { $all : [ "red" , "blank" ] } } ) // tags contains red & blank
+    - [Check the documentation for more details and more scenarios](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)
+
+       
+  
+- Operators
+  - $in : ```db.inventory.find({status: { $in : [ "A" , "D" ]  } )```
+  - $or : ```db.inventory.find({ $or : [( status:'A')  , (status :'D')]})```
+    - Apply or (Logical Operator) on all the condition in the array
+  - $gt (Greater Than ) : ```db.inventory.find({status: { $in : ["A","D"] } , qty : {$gt : 50 } } )```
+  - [Check the documentation for more information](https://www.mongodb.com/docs/manual/reference/operator/query/)
 
 <br>
 
