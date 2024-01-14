@@ -2,26 +2,26 @@
 This repo will contains my progress in jwasham study plan and other related topics i study 
 
 # Table of Contents
-  -  [ ] [1. Big-O Notation](#1-big-o-notation)
+  -   [1. Big-O Notation](#1-big-o-notation)
   - [ ] [2. Data Structures Section](#2-data-structures-section)
-    - [ ] [Arrays](#arrays)
+    - [Arrays](#arrays)
     - [x] [Stacks](#stacks)
       - [Stacks and recursion](#stacks-and-recursion) 
-    - [ ] [Queues](#queues)
-    - [ ] [Lists](#lists)
-    - [ ] [Trees](#trees)
-    - [ ] [Dictionary](#dictionary)
-    - [ ] [Graph](#graph)
-   - [ ] [3. Principles Section](#3-principles-section)
+    - [x] [Queues](#queues)
+    - [Lists](#lists)
+    - [Trees](#trees)
+    - [Dictionary](#dictionary)
+    - [Graph](#graph)
+   - [3. Principles Section](#3-principles-section)
      - [Encapsulation](#encapsulation)
-     - [ ] [DRY](#dry)
-     - [ ] [SOLID](#solid)
-   - [ ] [4. Databases Section](#4-databases-section)
+     - [DRY](#dry)
+     - [SOLID](#solid)
+   -  [4. Databases Section](#4-databases-section)
      - [DBMS](#dbms)
      - [RDBMS](#rdbms)
      - [SQL](#sql)
        - [MySQL](#mysql) 
-     - [x] [NoSQL](#nosql)
+     - [NoSQL](#nosql)
        - [mongoDB](#mongodb)
   - [5. Resources](#5-resources) 
 
@@ -82,8 +82,36 @@ This repo will contains my progress in jwasham study plan and other related topi
   - ### Stacks and recursion 
 
 # Queues
-<br>
-<br>
+- *Generally A Queue is defined as a linear data structure that operations are performed in First In First Out (FIFO) order.*
+- Main Accessing Mechanisms
+  - enqueue O(1)
+  - dequeue O(1)
+  -  front O(1)
+ 
+- __Examples in Real life__
+  - *Requests are served from a single shared resource, such as a printer, and CPU tasks are scheduled, among other things.*
+  - *In the real world, Call Center phone systems use Queues to keep people who call in order until a service person is available.*
+  - *Interrupt handling in real-time systems. Interrupts are dealt with in the order in which they are received, i.e. first come, first served.* 
+- __Types of Queues__
+  -  *Simple Queue*
+     -  *In a simple queue, insertion takes place at the rear and removal occurs at the front. It strictly follows the FIFO (First in First out) rule.*
+     <img src = "https://media.geeksforgeeks.org/wp-content/uploads/20220805131014/fifo.png" height= 300 width = 650 />
+     
+  -  *Circular Queue*
+     -  *In a circular queue, the last element points to the first element making a circular link.*
+     <img src= "https://miro.medium.com/v2/resize:fit:1400/1*J9K866QWpLC9OkmLLn3nEA.png" height= 300 width = 650 />
+     
+  -  *Priority Queue*
+     - *A priority queue is a special type of queue in which each element is associated with a priority and is served according to its priority. If elements with the same priority occur, they are served according to their order in the queue.*
+     
+  -  *Deque (Double Ended Queue)*
+     - *In a double ended queue, insertion and removal of elements can be performed from either from the front or rear. Thus, it does not follow the FIFO (First In First Out) rule.*
+     <img src= "https://favtutor.com/resources/images/uploads/mceu_34159180611678861723756.png" height= 300 width = 650 />
+
+- Implementation
+  - i have implemented  [Circular Queue Array based](./Data-Structures-Implementation/Python/array_based/queue.py)
+  - i have implemented [Queue Linked Based](./Data-Structures-Implementation/Python/linked_based/queue.py)
+
 
 # Lists
 <br>
