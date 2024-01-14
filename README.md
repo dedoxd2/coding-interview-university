@@ -2,25 +2,26 @@
 This repo will contains my progress in jwasham study plan and other related topics i study 
 
 # Table of Contents
-  - [1. Big-O Notation](#1-big-o-notation)
-  - [2. Data Structures Section](#2-data-structures-section)
-    - [Arrays](#arrays)
-    - [Stacks](#stacks)
-    - [Queues](#queues)
-    - [Lists](#lists)
-    - [Trees](#trees)
-    - [Dictionary](#dictionary)
-    - [Graph](#graph)
-   - [3. Principles Section](#3-principles-section)
+  -  [ ] [1. Big-O Notation](#1-big-o-notation)
+  - [ ] [2. Data Structures Section](#2-data-structures-section)
+    - [ ] [Arrays](#arrays)
+    - [x] [Stacks](#stacks)
+      - [Stacks and recursion](#stacks-and-recursion) 
+    - [ ] [Queues](#queues)
+    - [ ] [Lists](#lists)
+    - [ ] [Trees](#trees)
+    - [ ] [Dictionary](#dictionary)
+    - [ ] [Graph](#graph)
+   - [ ] [3. Principles Section](#3-principles-section)
      - [Encapsulation](#encapsulation)
-     - [DRY](#dry)
-     - [SOLID](#solid)
-   - [4. Databases Section](#4-databases-section)
+     - [ ] [DRY](#dry)
+     - [ ] [SOLID](#solid)
+   - [ ] [4. Databases Section](#4-databases-section)
      - [DBMS](#dbms)
      - [RDBMS](#rdbms)
      - [SQL](#sql)
        - [MySQL](#mysql) 
-     - [NoSQL](#nosql)
+     - [x] [NoSQL](#nosql)
        - [mongoDB](#mongodb)
   - [5. Resources](#5-resources) 
 
@@ -51,16 +52,20 @@ This repo will contains my progress in jwasham study plan and other related topi
 <br>
 
 # Stacks 
-- ##### __Definition__ - *: Stack of elements of type T is a finite sequence of elements of T together With the following operations* 
+- ##### __Definition__ - *: Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).* 
+
+- __Main Accessing Mechanisms__
   - *Create the stack , leaving it empty O(1)*
-  - *Determine whether the stack is empty or not O(1)*
+  - *Determine whether the stack is empty or not O(1)* 
   - *Determine whether the stack is full or not O(1)*
   - *Find the size of the stack O(1)*
   - *Push a new entry onto the top of the stack , provided the stack is not full O(1)*
   - *Pop the entry off the top of the stack , provided the stack is not empty O(1)*
   - *Retrieve  the Top entry off the stack , provided the stack is not empty O(1)*
   - *Traverse the stack , visiting each entry O(n)*
-  - *Clear the stack to make it empty O(1)*
+  - *Clear the stack to make it empty*
+    - *array based O(1) | O(n)  in case linked implemntation*
+
 <br>
 
 - ##### __Where to use it ?__
@@ -71,8 +76,10 @@ This repo will contains my progress in jwasham study plan and other related topi
    
 - __Stack Implementation__
   - *the stack data structure can be implemented Array Based and Linked List Based*
+<br>
 
-  
+
+  - ### Stacks and recursion 
 
 # Queues
 <br>
