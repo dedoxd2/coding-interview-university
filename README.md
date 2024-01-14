@@ -2,11 +2,11 @@
 This repo will contains my progress in jwasham study plan and other related topics i study 
 
 # Table of Contents
-  - [1. Big-O Notation](#1-big-o-notation)
+  - [ ] [1. Big-O Notation](#1-big-o-notation)
   - [2. Data Structures Section](#2-data-structures-section)
     - [Arrays](#arrays)
-    - [Stacks](#stacks)
-    - [Queues](#queues)
+    - [x] [Stacks](#stacks)
+    - [x] [Queues](#queues)
     - [Lists](#lists)
     - [Trees](#trees)
     - [Dictionary](#dictionary)
@@ -20,8 +20,8 @@ This repo will contains my progress in jwasham study plan and other related topi
      - [RDBMS](#rdbms)
      - [SQL](#sql)
        - [MySQL](#mysql) 
-     - [NoSQL](#nosql)
-       - [What is NoSQL ?](#what-is-nosql-) 
+     - [x] [NoSQL](#nosql)
+       -  [What is NoSQL ?](#what-is-nosql-) 
        - [Why NoSQL ?](#why-nosql-) 
        - [ACID vs. BASE](#acid-vs-base) 
        - [NoSQL vs. RDBMS](#nosql-vs-rdbms)
@@ -35,6 +35,7 @@ This repo will contains my progress in jwasham study plan and other related topi
          - [BSON](#bson)
          - [Basic Commands](#basic-commands)
          - [CRUD Operations](#crud-operations)
+         - [Data Models](#data-models)
   - [5. Resources](#5-resources) 
 
 # 1. Big-O Notation
@@ -291,22 +292,23 @@ This repo will contains my progress in jwasham study plan and other related topi
   - ```show dbs```
     - as the name saying ,it's gonna shows up the current databases on your machine 
   - ```use "DB's name"```
-    -  if the database does not exist it will create it , then switching to the meant database
+    -  if the database does not exist it will create it , then switch to it
   -  ```db.createCollection("Collection name",options)```
      -  creating a collection in the database
      - [Check the documentation for more details](https://www.mongodb.com/docs/manual/reference/method/db.createCollection/)
     <br>
 
   - ## __CRUD Operations__
-    - Create Operations
+     - Create 
        - Create Collection
         >     db.createCollection("Collection name",options)
        -  creating a collection in the database
        - [Check the documentation for more details for the options parameter ](https://www.mongodb.com/docs/manual/reference/method/db.createCollection/)
        <br>
+       <br>
  
 
-       -  Insert Data
+     -  Insert Data
           - you can insert one  document by using  
           >      db.tutorial.insertOne({title:"MongoDB",by:"ITI",url:"maharatech.com/MongoDB"})   
           - or you can insert multiple documents if you need
@@ -314,26 +316,50 @@ This repo will contains my progress in jwasham study plan and other related topi
           >     {_id:2 , title:"Example2" , by:"Example2" , url:"Example2" , publishDate : new Date()}])
           
           <br>
+          <br>
      
           
           - ***Note that : if you inserted data into a collection does not exists it will create the collection and insert the data into it***
           <br>
           <br>
 
-    - Read Operations
-      - db.tutorial.find({conditions})
-      >     db.tutorial.find({title:"MongoDB", by :"ITT"})
+    - Read 
+        - db.tutorial.find({conditions})
+        >     db.tutorial.find({title:"MongoDB", by :"ITT"})
+  
+        - you can access nested documents by using the dot "." notation ,for example
+        >     db.inventory.find({'size.w':11 , status : 'D'})
+  
+        - dealing with array values
+        >     db.inventory.find( { tags : [ "red" , "blank" ] } )  // tags "==" [red, blank]
+  
+        >     db.inventory.find({ tags : { $all : [ "red" , "blank" ] } } ) // tags contains red & blank
+      - [Check the documentation for more details and more scenarios](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)
+   
+<br> 
+<br>
 
-      - you can access nested documents by using the dot "." notation ,for example
-      >     db.inventory.find({'size.w':11 , status : 'D'})
+  - Update 
+     - db.collection.update[One/Many](fiter, updated values , options )
+       - Ex:
+           - will __Update only__ the first document that verify the condition 
+           >       db.inventory.updateOne({item:"paper"} ,  {  {  $set  :  {  "size.uom" : "cm" ,  status : “p”}}})
 
-      - dealing with array values
-      >     db.inventory.find( { tags : [ "red" , "blank" ] } )  // tags "==" [red, blank]
 
-      >     db.inventory.find({ tags : { $all : [ "red" , "blank" ] } } ) // tags contains red & blank
-    - [Check the documentation for more details and more scenarios](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)
+           - will __Update all__ documents that verify the condition
+           >       db.inventory.updateMany({item:"paper"} ,{{$set:{"size.uom" : "cm" ,  status : “p”}}})           
+       - [For more details please check the documentation](https://www.mongodb.com/docs/manual/reference/method/db.collection.updateOne/)
 
-       
+     - db.collection.replaceOne(fiter, new document , options )
+       - Ex :
+         - *will __Replace only__ the first document that verify the condition*
+           >     db.restaurant.replaceOne(   { "name" : "Jhon" },  { "name" : "Jhonny", "Job" : "Engineer" } )
+         - [For more details please check the documentation](https://www.mongodb.com/docs/manual/reference/method/db.collection.replaceOne/)
+<br>
+<br>
+
+  - Delete
+    -  Delete is similar to Update  but *Note that if you didn't specify any condition will delete all data in the collection*  
   
 - Operators
   - $in : ```db.inventory.find({status: { $in : [ "A" , "D" ]  } )```
@@ -341,6 +367,93 @@ This repo will contains my progress in jwasham study plan and other related topi
     - Apply or (Logical Operator) on all the condition in the array
   - $gt (Greater Than ) : ```db.inventory.find({status: { $in : ["A","D"] } , qty : {$gt : 50 } } )```
   - [Check the documentation for more information](https://www.mongodb.com/docs/manual/reference/operator/query/)
+
+
+ 
+- ## Data Models
+*or in SQL terms relations between collections <br> 
+there are Mainly two types of data models in MongoDB*
+- __Embedded Data Model__
+- __References Data Model__
+  - *Manual References*
+    - via GUI
+    - via command line 
+  - *DBRefs*
+    - Only via command line 
+<br>
+<br>
+
+
+-  __Embedded Data Model (Denormalized Data Model)__
+    - This approach maintains all the related data in a single document, which makes it easy to retrieve and maintain .
+    - Tho whole document can be retrieved in a single query
+      - Ex :
+        - ```db.users.findOne( ({"fname":"Jhon" ,"lname": "Jhonny"} ,  {"address_ids": 1 }) )```    
+  - Advanteges
+    - Better performance for read operations
+    - The ability to retrieve related data in a single database operation
+    - The ability to to update related data in a single atomic write operation 
+  - Disadvantages
+    - data duplications
+    - embedded document keeps on growing too much in size , and it can impact the read/write performance
+  - When to use the __embedded data model__ ?
+    - Entities have a “contains” or “has a” relationship between them.
+    - Entities have a one-to-many relationship between them. 
+
+      <br>
+      <br>
+
+      
+-  __References (Normalized Data Model)__
+   - Similar to the foriegn key and primary key Concepts from SQL
+   - In this approach , both the user and address documents will be maintained separtely but user document will contain a field that will reference the address document's id field.
+   - With this approach , we will need two queries And there is two ways to do it`   
+- __Manual References__
+   -  The references are simple to create and your application can resolve references as needed. 
+    <br>  Ex:  
+      - ``` var result = db.users.findOne({"fname":"Jhon" ,"lname_id": 1} , {"address_ids": 1} )```
+      - ``` var addresses = db.address.find( {"_id":{"$in": result["lname_id"] }} )```
+      <br>
+
+      
+- __DBRefs__
+  - *DBRefs are a convention for representing a document, rather than a specific reference type. They include the name of the collection, and in some cases the database name, in addition to the value from the _id field.*
+  - syntax : ```{ "$ref" : <value>, "$id" : <value>, "$db" : <value> }```
+    - $ref : ```The $ref field holds the name of the collection where the referenced document resides.```
+    - $id : ```The $id field contains the value of the _id field in the referenced document.```
+    - $db : ```Contains the name of the database where the referenced document resides.```
+  - Ex :
+    -
+>     {
+>        "_id" : ObjectId("2"),
+>      // .. application fields
+>     "creator" : {
+>                  "$ref" : "creators",
+>                 "$id" : ObjectId("5126bc054aed4daf9e2ab772"),
+>                  "$db" : "users",
+>                 "extraField" : "anything"
+>              }
+>      }    
+
+  - Note That : *The order of fields in the DBRef matters, and you must use the above sequence when using a DBRef.*
+<br>
+
+  - Advanteges
+      - *No data duplication*
+      - *Can represent more complex many-to-many relationships*
+      - *Can represent hierarchical data sets* 
+
+   - Disadvantages
+     - *More Complicated Queries*
+     - *Multiple Queries to read or write data*
+
+   - When to use the __References data model__ ?
+      - *Model hierarchical data sets*
+      - *Represent many-to-many relationships*
+      - *When the read performance gained as a result of using embedded documents does not outweigh the implications of the data duplication.*
+
+  
+
 
 <br>
 
