@@ -36,6 +36,7 @@ This repo will contains my progress in jwasham study plan and other related topi
          - [Basic Commands](#basic-commands)
          - [CRUD Operations](#crud-operations)
          - [Data Models](#data-models)
+         - [Grouping](#grouping)
   - [5. Resources](#5-resources) 
 
 # 1. Big-O Notation
@@ -451,10 +452,62 @@ there are Mainly two types of data models in MongoDB*
       - *Model hierarchical data sets*
       - *Represent many-to-many relationships*
       - *When the read performance gained as a result of using embedded documents does not outweigh the implications of the data duplication.*
+<br>
+<br>
 
-  
+## Grouping
+
+- What is *Grouping* ?
+ <br>
+  grouping is a stage in your query, and it's all about separates documents into groups according to a "group key". The output is one document for each unique group key.
+
+- Syntax :
+ >     {
+ >       $group:
+ >      {
+ >       _id: <expression>, // Group key
+ >        <field1>: { <accumulator1> : <expression1> },
+ >        ...
+ >     }
+ >     }
+<br> 
+<br>
 
 
+- Ex :
+>      db.sales.aggregate( [
+>      {
+>        $group: {
+>           _id: null,
+>           count: { $count: { } }
+>        }
+>      }
+>      ] )
+- it's equivelant to ```SELECT COUNT(*) AS count FROM sales``` in SQL
+
+- How to apply conditions on Groups ?
+  - if you want to appyl condtions on groups you need to use the ```$match``` operator
+  - Here example for demonstration
+    >      db.sales.aggregate(
+    >     [
+    >      // First Stage
+    >     {$group :{
+    >               _id : "$item",
+    >                totalSaleAmount: { $sum: { $multiply: [ "$price", "$quantity" ] } }
+    >             }
+    >     },
+    >        // Second Stage
+    >        {
+    >       $match: { "totalSaleAmount": { $gte: 100 } }
+    >        }
+    >     ]
+    >                  )
+
+  - [For more details please check the documentation](https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/)
+
+
+
+<br>
 <br>
 
 # 5. Resources
