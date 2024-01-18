@@ -12,15 +12,15 @@ This repo will contains my progress in jwasham study plan and other related topi
       - [Introduction To Lists](#introduction-to-lists)
       - [Why we need Linked Lists? (Arrays Vs. Linked Lists)](#why-we-need-linked-lists-arrays-vs-linked-lists)
       - [Types of Linked Lists](#types-of-linked-lists)
-      - [Trees](#trees)
-      - [Dictionary](#dictionary)
-      - [Graph](#graph)
+    - [Trees](#trees)
+    - [Dictionary](#dictionary)
+    - [Graph](#graph)
    - [3. Principles Section](#3-principles-section)
      - [Encapsulation](#encapsulation)
      - [DRY](#dry)
      - [SOLID](#solid)
-   -  [4. Databases Section](#4-databases-section)
-     - [DBMS](#dbms)
+   - [4. Databases Section](#4-databases-section)
+      - [DBMS](#dbms)
      - [RDBMS](#rdbms)
      - [SQL](#sql)
        - [MySQL](#mysql) 
@@ -119,7 +119,7 @@ This repo will contains my progress in jwasham study plan and other related topi
 # Lists
 
  - # Introduction To lists
-   - __What is Linked List ?__
+    __What is Linked List ?__
 <br>
 
 
