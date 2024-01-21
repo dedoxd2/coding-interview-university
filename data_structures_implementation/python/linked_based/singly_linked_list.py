@@ -15,6 +15,9 @@ class LinkedList():
     def isEmpty(self) -> bool:
         return self._size == 0
 
+    def __len__(self) -> int:
+        return self._size
+
     def get_size(self) -> int:
         return self._size
 
