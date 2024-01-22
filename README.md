@@ -13,6 +13,10 @@ This repo will contains my progress in jwasham study plan and other related topi
       - [Why we need Linked Lists? (Arrays Vs. Linked Lists)](#why-we-need-linked-lists-arrays-vs-linked-lists)
       - [Types of Linked Lists](#types-of-linked-lists)
     - [Trees](#trees)
+      - [Introduction To Trees](#introduction-to-trees)
+      - [Definitions](#definitions)
+      - [Summary](#summary)
+      - [Theorem](#theorem)
     - [Dictionary](#dictionary)
     - [Graph](#graph)
    - [3. Principles Section](#3-principles-section)
@@ -226,8 +230,91 @@ __hold still There is nothing for free , Here some disadvantages of Linked Lists
 
       
 # Trees
+
+- ## Introduction To Trees
+  - The tree is a nonlinear hierarchical data structure and comprises a collection of entities known as nodes. It connects each node in the tree data structure using "edges”, both directed and undirected.
+  - The image below represents the tree data structure. The blue-colored circles depict the nodes of the tree and the black lines connecting each node with another are called edges.
+<img src = "https://www.tutorialandexample.com/wp-content/uploads/2020/10/image-68.png"   />
 <br>
+
+## Definitions 
+  - __What is Binary Tree Data Structure ?__
+    - *A binary tree is either empty, or it consists of a node (vertex) called the root together with two binary trees called the left subtree and the right subtree of the root*
+
+  - Binary Search Tree : Is Tree produced by Binary Search Algorithm
+
+
+
+   <br>
+
+   
+  - __Notes__ about the previous definition :
+    - *The only node at level 0 is the root*
+    - A node may have up to two children in the next level
+    - The children of a node are joined to their parents by links called edges
+   
+  - __Depth (or height) :__
+    - The depth of a node is the tree is the node's distance from the root; i.e., its level
+    - Equivalent Definition (revursive) : The depth of a node is 1 + the depth of its parent . And the root is at depth 0.
+   
+  -  The collection of nodes in the subtree rooted at a node (excluding the node itself) is referred to as its __descendants__.
+  -  The collection of nodes encountered by climbing down (to the root) a path from a node to the root of the whole ree is the node's __ancestors (or predecessors).__
+  -  The depth or height h of a tree : is the maximum height among nodes . Also, we can say
+     - h = 0 incase tree has only root
+     -  or = 1 + max(h(left tree) , h(right tree))
+     - h = height
+   
+  -  Outdegree : is the number of edges coming out of a node . In binary trees is at most 2.
+  -  Indegree : is the number of edges coming to a node . In any tree this is 1.
+  -  Lemma : a saturated (with maximum number of nodes) level i has 2<sup>i</sup>
+     - Proof : For i = 0 the statement is true . Assume it is true for some k, then the number of nodes om this level is 2<sup>k</sup>. Then , the maximum number of nodes of next level, k + 1, is 2 x 2<sup>k</sup>,which completes the induction .
+  - Saturated Level : a level with maximum number of nodes .
+  - Full Tree : a tree whose all levels are saturated
+  - Corollary : If all levels (from 0 to h) are saturated then the trees has 2<sup>h+1</sup>-1 nodes
+    - Proof : <br>
+
+     $$
+n = \left(\sum_{l=0}^h 2^l \right) = 2^{h + 1} - 1
+$$
+
+ - Complete Tree : Is the tree whose all levels are saturated except possibly the last one.
+   - its leaves are at the last two levels at most (the converse is not true)
+   - it is the shortest tree for given number of nodes 
+
+
+- ## Summary
+  - *Each tree has a root node (at the top) having some value.*
+  - *The root node has zero or more child nodes.*
+  - *Each child node has zero or more child nodes, and so on. This create a subtree in the tree. Every node has it’s own subtree made up of his children and their children, etc. This means that every node on its own can be a tree.*
+    - __A binary search tree (BST) adds these two characteristics:__
+      - *Each node has a maximum of up to two children.*
+      - *For each node, the values of its left descendent nodes are less than that of the current node, which in turn is less than the right descendent nodes (if any).*
+
+
+## Theorem 
 <br>
+For the binary search algorithm :
+<br>
+
+
+- the best case takes 1 comparison
+- The worst successful case takes
+
+   <br>
+   
+$$
+h_n + 1 = \lceil \log(n+1) \rceil = \lfloor \log(n) \rfloor + 1.
+$$
+<br>
+
+
+
+  - the unsuccessful case takes exactly h<sub>n</sub> + 1 if the tree is ful , i.e., all levels are saturated and takes either h<sub>n</sub> or h<sub>n</sub> + 1 otherwise.
+  - no other search method (based on comparison) does better than binary search in __the worst case__
+
+     
+ 
+       
 
 # Dictionary
 <br>
