@@ -22,7 +22,7 @@ This repo will contains my progress in jwasham study plan and other related topi
       - [Theorem](#theorem)
       - [Tree Traversal](#tree-traversal)
       - [BT Implementation](#bt-implementation)
-  - [Dictionary](#dictionary)
+  - [Hash Table](#hash-table)
   - [Graph](#graph)
 - [3. Principles Section](#3-principles-section)
   - [Encapsulation](#encapsulation)
@@ -33,7 +33,7 @@ This repo will contains my progress in jwasham study plan and other related topi
   - [RDBMS](#rdbms)
   - [SQL](#sql)
     - [MySQL](#mysql)
-    - [x] [NoSQL](#nosql)
+  - [x] [NoSQL](#nosql)
       - [What is NoSQL ?](#what-is-nosql-)
       - [Why NoSQL ?](#why-nosql-)
       - [ACID vs. BASE](#acid-vs-base)
@@ -64,8 +64,8 @@ This repo will contains my progress in jwasham study plan and other related topi
 **_Where every thing should start from!_**
 
 - ##### **type :**
-  - _is a set of values and a set of operations on those values._
-  - _Example :_
+  - __is a set of values and a set of operations on those values.__
+  - __Example :__
     - _We can define a datatype boolean that takes the set of values {0,1} together with the operations AND, OR, and NOT._
 - ##### **Sequence :**
   - _A sequence of length 0 is empty . A sequence of length n >=1 of elements from a set T is an ordered pair (Sn-1,t) Where Sn-1 is a sequence of length n-1 of elements from T and t is an element of T_
@@ -350,7 +350,7 @@ GO TO [BT Implementation](data_structures_implementation/python/linked_based/b_t
 
 <br>
 
-# Dictionary
+# Hash Table
 
 <br>
 <br>
