@@ -16,11 +16,12 @@ This repo will contains my progress in jwasham study plan and other related topi
     - [Types of Linked Lists](#types-of-linked-lists)
   - [x] [Trees](#trees)
     - [Introduction To Trees](#introduction-to-trees)
-    - [Definitions](#definitions)
-    - [Summary](#summary)
-    - [Theorem](#theorem)
-    - [Tree Traversal](#tree-traversal)
-    - [BT Implementation](#bt-implementation)
+    - [Binary Tree](#binary-tree)
+      - [Definitions](#definitions)
+      - [Summary](#summary)
+      - [Theorem](#theorem)
+      - [Tree Traversal](#tree-traversal)
+      - [BT Implementation](#bt-implementation)
   - [Dictionary](#dictionary)
   - [Graph](#graph)
 - [3. Principles Section](#3-principles-section)
@@ -140,8 +141,9 @@ This repo will contains my progress in jwasham study plan and other related topi
 
 # Lists
 
-- # Introduction To lists
-      __What is Linked List ?__
+- ## Introduction To lists
+
+  __What is Linked List ?__
   <br>
 
 _A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers._
@@ -173,7 +175,7 @@ _Linked lists offer several advantages and use cases in comparison to other data
   - _Linked lists do not require specifying the size in advance. This is particularly beneficial when the number of elements is unknown or can vary._  
     <br>
 
-**hold still There is nothing for free , Here some disadvantages of Linked Lists :\_**
+**hold still There is nothing for free , Here some disadvantages of Linked Lists :**
 
 - _Memory Overhead:_
   - **Linked lists require extra memory per element to store the pointer to the next node. This additional memory overhead is not present in arrays.**
@@ -252,10 +254,12 @@ _Linked lists offer several advantages and use cases in comparison to other data
 
   - The tree is a nonlinear hierarchical data structure and comprises a collection of entities known as nodes. It connects each node in the tree data structure using "edges”, both directed and undirected.
   - The image below represents the tree data structure. The blue-colored circles depict the nodes of the tree and the black lines connecting each node with another are called edges.
+
+  <br>
     <img src = "https://www.tutorialandexample.com/wp-content/uploads/2020/10/image-68.png"   />
     <br>
-
-- Generally there are many types of trees either they are binary or not (ternary or N ), But i will start with BT , BST
+- ## Binary Tree
+- Generally there are many types of trees either they are binary or not (ternary or N nodes), But i will start with BT , BST
 
 ## Definitions
 
@@ -294,11 +298,8 @@ _Linked lists offer several advantages and use cases in comparison to other data
 - Full Tree : a tree whose all levels are saturated
 - Corollary : If all levels (from 0 to h) are saturated then the trees has 2<sup>h+1</sup>-1 nodes - Proof : <br>
 
-       $$
-
-  n = \left(\sum\_{l=0}^h 2^l \right) = 2^{h + 1} - 1
-
   $$
+  n = \left(\sum\_{l=0}^h 2^l \right) = 2^{h + 1} - 1
   $$
 
 - Complete Tree : Is the tree whose all levels are saturated except possibly the last one.
@@ -345,7 +346,7 @@ $$
 
 ## BT Implementation
 
-GO TO [BT Implementation](#data_structures_implementation/python/linked_based/b_trees.py)
+GO TO [BT Implementation](data_structures_implementation/python/linked_based/b_trees.py)
 
 <br>
 
