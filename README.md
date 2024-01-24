@@ -12,11 +12,13 @@ This repo will contains my progress in jwasham study plan and other related topi
       - [Introduction To Lists](#introduction-to-lists)
       - [Why we need Linked Lists? (Arrays Vs. Linked Lists)](#why-we-need-linked-lists-arrays-vs-linked-lists)
       - [Types of Linked Lists](#types-of-linked-lists)
-    - [Trees](#trees)
+    - [x] [Trees](#trees)
       - [Introduction To Trees](#introduction-to-trees)
       - [Definitions](#definitions)
       - [Summary](#summary)
       - [Theorem](#theorem)
+      - [Tree Traversal](#tree-traversal)
+      - [BT Implementation](#bt-implementation)
     - [Dictionary](#dictionary)
     - [Graph](#graph)
    - [3. Principles Section](#3-principles-section)
@@ -237,6 +239,8 @@ __hold still There is nothing for free , Here some disadvantages of Linked Lists
 <img src = "https://www.tutorialandexample.com/wp-content/uploads/2020/10/image-68.png"   />
 <br>
 
+- Generally there are many types of trees either they are binary or not (ternary or N ), But i will start with BT , BST
+
 ## Definitions 
   - __What is Binary Tree Data Structure ?__
     - *A binary tree is either empty, or it consists of a node (vertex) called the root together with two binary trees called the left subtree and the right subtree of the root*
@@ -311,10 +315,31 @@ $$
 
   - the unsuccessful case takes exactly h<sub>n</sub> + 1 if the tree is ful , i.e., all levels are saturated and takes either h<sub>n</sub> or h<sub>n</sub> + 1 otherwise.
   - no other search method (based on comparison) does better than binary search in __the worst case__
+<br>
 
+
+## Tree Traversal
+
+  - Before ADT and coding , How to traverse a BT ?
+    - There was no problem for traversing a linear structure like a List, But for a BT, at each node V having left and right subtrees L and R (respectively) we can do the following visitng :
+      - VLR (Preorder)
+      - VRL
+      - LVR (Inorder)
+      - LRV (Postorder)
+      - RVL
+      - RLV
      
- 
-       
+    - The standards are Pre,In,and Post order. In the three of them , L precedes R; then V is before them (Pre) or in between (In) or after them(Post)
+<br>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20230623123129/traversal.png" height = 300 wedth = 650 />
+
+<br>
+
+## BT Implementation
+GO TO [BT Implementation](#data_structures_implementation/python/linked_based/b_trees.py)
+
+<br>
+
 
 # Dictionary
 <br>
