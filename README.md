@@ -338,9 +338,19 @@ $$
 
 ## Tree Traversal
 
-- Before ADT and coding , How to traverse a BT ? - There was no problem for traversing a linear structure like a List, But for a BT, at each node V having left and right subtrees L and R (respectively) we can do the following visitng : - VLR (Preorder) - VRL - LVR (Inorder) - LRV (Postorder) - RVL - RLV - The standards are Pre,In,and Post order. In the three of them , L precedes R; then V is before them (Pre) or in between (In) or after them(Post)
+- Before ADT and coding , How to traverse a BT ?
+ - There was no problem for traversing a linear structure like a List, But for a BT, at each node V having left and right subtrees L and R (respectively) we can do the following visitng :
+   - VLR (Preorder)
+   - VRL 
+   - LVR (Inorder) 
+   - LRV (Postorder) 
+   - RVL
+   - RLV 
+   - The standards are Pre,In,and Post order. In the three of them , L precedes R; then V is before them (Pre) or in between (In) or after them(Post)
   <br>
-  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230623123129/traversal.png" height = 300 wedth = 650 />
+  <img src="https://www.sahinarslan.tech/static/f0f154c04b1c5399e973609a7f4a2cf3/3d469/binary-tree-traversals.jpg" height = 500 wedth = 650 />
+
+- __Note That :__ The inorder traversal gives us *Sorted* array  
 
 <br>
 
