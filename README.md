@@ -53,6 +53,119 @@ This repo will contains my progress in jwasham study plan and other related topi
 - [5. Resources](#5-resources)
 
 # 1. Big-O Notation
+<br>
+
+before we go through the big O notation we need first to know what is __Time Complexity__ and __Space Complexity__
+
+<br>
+
+So let's start with What is *Time Complexity* ?
+
+
+<br> 
+
+- Time Complexity of an Algorithm is expressed in terms of the number of basic operations used by the algorithm when the input has a particular size .
+- Important Comments : 
+  - why we using number of basic operatons instead of the time ?
+    - Because the time to solve a problem could differ from machine to another , therefore We can't use it as a reference
+  - Not all operations are basic; e.g.,
+    - x = MatrixMultipcation(A,B);
+    - x = 0;
+   
+  - Not all basic operations take same execution time.
+    - x = 3 * 4;
+    - x = 3 + r;
+   
+  - Therefore , we have to __define step(s)__
+<br>
+
+*Space Complexity* :
+<br>
+ - When an algorithm is run on a computer, it requires a certain amount of memory space. The amount of memory used by a program to execute it is represented by its space complexity.
+ 
+ <br>
+ <br>
+
+ 
+ - What is __Big O__ Notation ?
+   - Big O notation is a mathematical notation used in computer science to describe the time complexity or space complexity of an algorithm. It provides a way to classify algorithms based on how their runtime or memory usage grows as the size of the input data increases.
+   - Mathmatical Expresion :
+     - `O(g(n)) = { f(n) : there exist positive constants c and n₀ such that 0 ≤ f(n) ≤ cg(n) for all n ≥ n₀ }`
+       - O(g(n)) denotes the set of functions that grow no faster than g(n) asymptotically.
+       - f(n) represents a function describing the performance of an algorithm in terms of time complexity or space complexity.
+       - g(n) represents a specific function that serves as an upper bound or reference point for the growth rate of f(n).
+       - c is a positive constant that serves as a scaling factor.
+       - n₀ is the input size threshold beyond which the inequality holds.
+      <br>
+<img src = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200807150659/3611.png" />
+<br>
+
+   - In Big O notation, the performance of an algorithm is expressed in terms of the worst-case scenario, indicating the upper bound of its time or space requirements as a function of the input size.
+<br>
+<br>
+
+### Summary :
+
+   Big O notation allows developers to analyze and compare the efficiency of algorithms without being concerned about the specific details of their implementations or hardware dependencies. <br> It provides a standard way to discuss and reason about algorithmic complexity, helping to make informed decisions when designing or selecting algorithms for various tasks.
+
+<br>
+   Big O Complexity Chart
+<br>
+<br>
+
+<img src="https://cdn-media-1.freecodecamp.org/images/1*KfZYFUT2OKfjekJlCeYvuQ.jpeg" /> 
+
+<br>
+<br>
+<br>
+
+
+Omega notation : (On the other hand)
+  - Big Omega notation, denoted as Ω(g(n)), represents the lower bound on the growth rate of a function. It signifies that a function f(n) grows at least as fast as the function g(n), within constant factors, for sufficiently large values of n.
+  - In mathematical terms, Big Omega notation is defined as:
+    - `Ω(g(n)) = { f(n) : there exist positive constants c and n₀ such that 0 ≤ c * g(n) ≤ f(n) for all n ≥ n₀ }`
+    - In this expression:
+      - Ω(g(n)) denotes the set of functions that grow at least as fast as g(n) asymptotically.
+      - f(n) represents a function describing the performance of an algorithm in terms of time complexity or space complexity.
+      - g(n) represents a specific function that serves as a lower bound or reference point for the growth rate of f(n).
+      - c is a positive constant that serves as a scaling factor.
+      - n₀ is the input size threshold beyond which the inequality holds.
+      <br>
+      <img src ="https://blogmedia.testbook.com/blog/wp-content/uploads/2016/12/Aysmptotic-Fig4.png" />
+
+      <br>
+
+      ### Summary :
+      Essentially, Big Omega notation provides a lower bound on the growth rate of a function, indicating that the function's behavior is bounded from below by the function g(n). This notation is often used to describe algorithms or functions whose time or space complexity exhibits a specific lower bound behavior as the input size grows.
+      
+      <br>
+    
+<br>
+
+
+
+Theta notation :
+  - Big Theta notation, denoted as Θ(g(n)), represents the tight bound on the growth rate of a function. It signifies that a function f(n) grows at the same rate as the function g(n), within constant factors, for sufficiently large values of n.
+  -  In mathematical terms, Big Theta notation is defined as:
+     - `Θ(g(n)) = { f(n) : there exist positive constants c₁, c₂, and n₀ such that 0 ≤ c₁ * g(n) ≤ f(n) ≤ c₂ * g(n) for all n ≥ n₀ }`
+     - In this expression:
+        - Θ(g(n)) denotes the set of functions that grow at the same rate as g(n) asymptotically.
+        - f(n) represents a function describing the performance of an algorithm in terms of time complexity or space complexity.
+        - g(n) represents a specific function that serves as a tight bound or reference point for the growth rate of f(n).
+        - c₁ and c₂ are positive constants that serve as scaling factors.
+        - n₀ is the input size threshold beyond which the inequalities hold.
+     <br>
+        <img src="https://studyglance.in/daa/images/theta-notation.jpg" wiedth = 500 height = 550 />
+     <br>
+
+     ### Summary :
+     
+      Essentially, Big Theta notation provides both an upper and lower bound on the growth rate of a function, indicating that the function's behavior is tightly constrained by the function g(n). This notation is often used to describe algorithms or functions whose time or space complexity exhibits a specific and consistent behavior as the input size grows.
+
+<br>
+<br>
+
+
 
 # 2. Data Structures Section
 
