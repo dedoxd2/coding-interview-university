@@ -4,11 +4,13 @@ This repo will contains my progress in jwasham study plan and other related topi
 
 # Table of Contents
 
-- [1. Big-O Notation](#1-big-o-notation)
+- [x] [1. Big-O Notation](#1-big-o-notation)
 - [ ] [2. Data Structures Section](#2-data-structures-section)
-  - [Arrays](#arrays)
+  - [x] [Arrays](#arrays)
+    - [Static Arrays](#static-arrays)
+    - [Dynamic Arrays](#dynamic-arrays)
   - [x] [Stacks](#stacks)
-    - [Stacks and recursion](#stacks-and-recursion)
+    - [ ] [Stacks and recursion](#stacks-and-recursion)
   - [x] [Queues](#queues)
   - [x] [Lists](#lists)
     - [Introduction To Lists](#introduction-to-lists)
@@ -106,7 +108,7 @@ So let's start with What is *Time Complexity* ?
 
 ### Summary :
 
-   Big O notation allows developers to analyze and compare the efficiency of algorithms without being concerned about the specific details of their implementations or hardware dependencies. <br> It provides a standard way to discuss and reason about algorithmic complexity, helping to make informed decisions when designing or selecting algorithms for various tasks.
+   Big O notation allows us (developers) to analyze and compare the efficiency of algorithms without being concerned about the specific details of their implementations or hardware dependencies. <br> It provides a standard way to discuss and reason about algorithmic complexity, helping to make informed decisions when designing or selecting algorithms for various tasks.
 
 <br>
    Big O Complexity Chart
@@ -188,8 +190,32 @@ Theta notation :
 
 # Arrays
 
+Arrays Can Be devided into : *static Arrays* and *dynamic Arrays*
+
+### Static Arrays 
+- A static array is a fixed-size collection of elements stored in contiguous memory locations. Each element in the array is accessed by its index.
+- *Properties :*
+  -  Fixed size: The size of a static array is predetermined and cannot be changed during runtime.
+  -  Contiguous memory allocation: All elements in a static array are stored in adjacent memory locations.
+  -  Efficient access: Elements can be accessed in constant time O(1) by their indices.
+  -  Limited flexibility: Once declared, the size of a static array cannot be changed, making it less flexible for dynamic storage needs.
+
 <br>
+ 
+### Dynamic Arrays
+- A dynamic array, also known as a resizable array, is a data structure that allows its size to be dynamically adjusted during runtime.
+- mainly the dynamic arrays should fix the issue that static arrays comes with fixed size.
+- But that's comes with overhead, the process of resizing the array could make a bootlnick to the performance of the app.
+
 <br>
+
+### *Summary :*
+- Both static and dynamic arrays offers constant time ( O(1) ) to access Elements
+- in static arrays we can't change the size once we have declared it, but we can resize a dynamic array but it comes with a price ( it takes a O(n) operations to allocate the new size and copy the old array to the new one )
+- in static array it could be inefficient in saving memory in sometimes , when we declare for example array with size 100 Element, but only use 15 element, in a __dynamic array__ we can shrink it 
+ <br>
+
+
 
 # Stacks
 
